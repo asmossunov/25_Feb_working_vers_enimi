@@ -4,8 +4,9 @@ from responses.models import Response
 
 
 class AccountAdmin(admin.ModelAdmin):
-    list_display = ['username', 'id']
-
+    list_display = ['username', 'id']  
+    exclude = ['parent']
+	
 
 admin.site.register(Account, AccountAdmin)
 
